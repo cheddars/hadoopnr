@@ -11,6 +11,7 @@ public class WordCount extends Configured implements Tool {
 	public int run(String[] args) throws IOException {
 		JobConf conf = new JobConf(WordCount.class);
 		conf.setJobName("word count");
+		conf.setJar("wordcount.jar");
 		
 		// For defining the output key format
 		conf.setOutputKeyClass(Text.class);
